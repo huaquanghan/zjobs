@@ -17,7 +17,7 @@ Semantic analysis (the JSON payload) is orchestrated by the Claude skills in `.c
 
 ## Mental model
 
-![zjobs mental model](docs/mental-model.svg)
+![zjobs mental model](docs/mental-model.png)
 
 ## Install / build
 
