@@ -1,0 +1,23 @@
+{
+  "axes": {
+    "hard_constraints": 0.9,
+    "must_have_skills": 0.9,
+    "nice_to_have_skills": 0.7,
+    "seniority_scope": 0.9,
+    "domain_context": 0.8,
+    "evidence_strength": 0.9
+  },
+  "gates": [
+    {"name": "location", "passed": false, "reason": "JD requires on-site in Berlin", "jd_evidence": "Location: Berlin, on-site only"},
+    {"name": "work_authorization", "passed": true, "reason": "", "jd_evidence": "Open to all applicants"},
+    {"name": "language", "passed": true, "reason": "", "jd_evidence": "English working language"},
+    {"name": "experience_years", "passed": true, "reason": "", "jd_evidence": "5+ years Go"},
+    {"name": "seniority", "passed": true, "reason": "", "jd_evidence": "Senior Backend Engineer"}
+  ],
+  "gaps": [],
+  "prep": {
+    "questions": ["Walk me through your largest Go service", "How do you scale PostgreSQL?", "Describe a production incident you owned"],
+    "references": [{"title": "Go Concurrency Patterns", "url": "https://example.com/go-concurrency", "source": "exa"}],
+    "next_actions": ["None while location gate fails"]
+  }
+}

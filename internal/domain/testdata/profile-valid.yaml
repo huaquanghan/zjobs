@@ -1,0 +1,13 @@
+name: Tinh
+role_targets:
+  - Senior Backend Engineer
+  - Staff Platform Engineer
+work_constraints:
+  locations: [Hanoi, Remote]
+  remote_ok: true
+  work_authorization: [Vietnam]
+  languages: [Vietnamese, English]
+  min_years: 5
+  seniority: senior
+must_have_skills: [Go, PostgreSQL, Kubernetes]
+nice_to_have_skills: [Kafka, Redis, Terraform]

@@ -1,0 +1,10 @@
+name: Tinh
+role_targets:
+  - Senior Backend Engineer
+work_constraints:
+  locations: [Hanoi]
+  remote_ok: false
+  work_authorization: [Vietnam]
+  languages: [Vietnamese]
+  min_years: 5
+# must_have_skills deliberately missing -> validation must fail

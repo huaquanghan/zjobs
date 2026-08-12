@@ -1,0 +1,12 @@
+Senior Backend Engineer (Go) at Acme
+Location: Hanoi, hybrid — remote friendly
+Acme is hiring a Senior Backend Engineer to own our core services.
+
+Requirements:
+- 5+ years of backend engineering, Go preferred
+- Strong PostgreSQL and Kubernetes experience
+- English working language
+
+Nice to have: Kafka, Redis, Terraform.
+
+Apply by emailing careers@acme.example.

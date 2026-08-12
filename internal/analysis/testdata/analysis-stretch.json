@@ -1,0 +1,25 @@
+{
+  "axes": {
+    "hard_constraints": 0.8,
+    "must_have_skills": 0.6,
+    "nice_to_have_skills": 0.5,
+    "seniority_scope": 0.7,
+    "domain_context": 0.6,
+    "evidence_strength": 0.6
+  },
+  "gates": [
+    {"name": "location", "passed": true, "reason": "", "jd_evidence": "Hanoi, hybrid"},
+    {"name": "work_authorization", "passed": true, "reason": "", "jd_evidence": "Open to all applicants"},
+    {"name": "language", "passed": true, "reason": "", "jd_evidence": "English working language"},
+    {"name": "experience_years", "passed": true, "reason": "", "jd_evidence": "5+ years Go"},
+    {"name": "seniority", "passed": true, "reason": "", "jd_evidence": "Senior Backend Engineer"}
+  ],
+  "gaps": [
+    {"requirement": "Kubernetes", "jd_evidence": "Required: Kubernetes", "cv_evidence": "Used Docker only", "impact": "must_have_skills", "action": "learn"}
+  ],
+  "prep": {
+    "questions": ["How do you operate workloads on Kubernetes?", "What does a good rollout look like?", "How do you debug a slow API?"],
+    "references": [{"title": "Kubernetes in Production", "url": "https://example.com/k8s-prod", "source": "exa"}],
+    "next_actions": ["Hands-on K8s workshop"]
+  }
+}

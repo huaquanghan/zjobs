@@ -1,0 +1,4 @@
+Senior Backend Engineer (Go) at Acme
+Location: Hanoi, hybrid
+We are looking for a senior Go engineer with 5+ years of experience.
+Required: Go, PostgreSQL, Kubernetes. Nice to have: Kafka.

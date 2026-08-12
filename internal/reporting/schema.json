@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zjobs.local/report.schema.json",
+  "title": "jdctl report contract",
+  "description": "Stable report output schema (v1.0). Rendered by jdctl and validated in tests.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "job", "profile", "cv", "verdict", "score", "axes", "gates", "gaps", "prep"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "generated_at": {"type": "string"},
+    "job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "hash"],
+      "properties": {
+        "title": {"type": "string"},
+        "company": {"type": "string"},
+        "location": {"type": "string"},
+        "source": {"type": "string", "enum": ["url", "file", "paste"]},
+        "url": {"type": "string"},
+        "hash": {"type": "string", "minLength": 1}
+      }
+    },
+    "profile": {"type": "string"},
+    "cv": {"type": "string"},
+    "verdict": {"type": "string", "enum": ["Apply", "Stretch", "Skip"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "axes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hard_constraints", "must_have_skills", "nice_to_have_skills", "seniority_scope", "domain_context", "evidence_strength"],
+      "properties": {
+        "hard_constraints": {"type": "number", "minimum": 0, "maximum": 1},
+        "must_have_skills": {"type": "number", "minimum": 0, "maximum": 1},
+        "nice_to_have_skills": {"type": "number", "minimum": 0, "maximum": 1},
+        "seniority_scope": {"type": "number", "minimum": 0, "maximum": 1},
+        "domain_context": {"type": "number", "minimum": 0, "maximum": 1},
+        "evidence_strength": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "passed", "reason", "jd_evidence"],
+        "properties": {
+          "name": {"type": "string", "enum": ["location", "work_authorization", "language", "experience_years", "seniority"]},
+          "passed": {"type": "boolean"},
+          "reason": {"type": "string"},
+          "jd_evidence": {"type": "string"}
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["requirement", "jd_evidence", "cv_evidence", "impact", "action"],
+        "properties": {
+          "requirement": {"type": "string"},
+          "jd_evidence": {"type": "string"},
+          "cv_evidence": {"type": "string"},
+          "impact": {"type": "string"},
+          "action": {"type": "string", "enum": ["learn", "rewrite_cv", "prepare_story", "skip"]}
+        }
+      }
+    },
+    "prep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["questions", "references", "next_actions"],
+      "properties": {
+        "questions": {"type": "array", "items": {"type": "string"}},
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "url", "source"],
+            "properties": {
+              "title": {"type": "string"},
+              "url": {"type": "string"},
+              "source": {"type": "string"}
+            }
+          }
+        },
+        "next_actions": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

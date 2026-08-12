@@ -1,0 +1,15 @@
+# jdctl configuration — overlays built-in defaults.
+# Rubric weights feed the 6-axis scoring; keys must match the locked axes.
+rubric:
+  hard_constraints: 1.0
+  must_have_skills: 1.0
+  nice_to_have_skills: 0.5
+  seniority_scope: 0.8
+  domain_context: 0.6
+  evidence_strength: 0.7
+
+# Search provider settings. Exa is the only real provider in the MVP;
+# EXA_API_KEY env var is preferred over committing a key here.
+provider:
+  exa:
+    api_key: ""

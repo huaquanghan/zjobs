@@ -1,0 +1,4 @@
+harness.db
+harness.db-wal
+harness.db-shm
+.kit/

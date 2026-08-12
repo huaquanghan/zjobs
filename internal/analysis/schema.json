@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zjobs.local/analysis.schema.json",
+  "title": "jdctl analysis contract",
+  "description": "Structured JSON emitted by the Claude analyze-jd skill and validated by Go.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["axes", "gates", "gaps", "prep"],
+  "properties": {
+    "axes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hard_constraints", "must_have_skills", "nice_to_have_skills", "seniority_scope", "domain_context", "evidence_strength"],
+      "properties": {
+        "hard_constraints": {"type": "number", "minimum": 0, "maximum": 1},
+        "must_have_skills": {"type": "number", "minimum": 0, "maximum": 1},
+        "nice_to_have_skills": {"type": "number", "minimum": 0, "maximum": 1},
+        "seniority_scope": {"type": "number", "minimum": 0, "maximum": 1},
+        "domain_context": {"type": "number", "minimum": 0, "maximum": 1},
+        "evidence_strength": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "passed", "reason", "jd_evidence"],
+        "properties": {
+          "name": {"type": "string", "enum": ["location", "work_authorization", "language", "experience_years", "seniority"]},
+          "passed": {"type": "boolean"},
+          "reason": {"type": "string"},
+          "jd_evidence": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["requirement", "jd_evidence", "cv_evidence", "impact", "action"],
+        "properties": {
+          "requirement": {"type": "string", "minLength": 1},
+          "jd_evidence": {"type": "string", "minLength": 1},
+          "cv_evidence": {"type": "string", "minLength": 1},
+          "impact": {"type": "string", "enum": ["hard_constraints", "must_have_skills", "nice_to_have_skills", "seniority_scope", "domain_context", "evidence_strength"]},
+          "action": {"type": "string", "enum": ["learn", "rewrite_cv", "prepare_story", "skip"]}
+        }
+      }
+    },
+    "prep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["questions", "references", "next_actions"],
+      "properties": {
+        "questions": {"type": "array", "minItems": 3, "maxItems": 5, "items": {"type": "string", "minLength": 1}},
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "url", "source"],
+            "properties": {
+              "title": {"type": "string", "minLength": 1},
+              "url": {"type": "string", "pattern": "^https?://"},
+              "source": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "next_actions": {"type": "array", "minItems": 1, "maxItems": 2, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

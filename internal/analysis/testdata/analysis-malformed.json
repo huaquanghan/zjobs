@@ -1,0 +1,25 @@
+{
+  "axes": {
+    "hard_constraints": 0.9,
+    "must_have_skills": 0.9,
+    "nice_to_have_skills": 0.7,
+    "seniority_scope": 0.9,
+    "domain_context": 0.8,
+    "evidence_strength": 0.9
+  },
+  "gates": [
+    {"name": "location", "passed": true, "reason": "", "jd_evidence": "Hanoi"},
+    {"name": "work_authorization", "passed": true, "reason": "", "jd_evidence": "Any"},
+    {"name": "language", "passed": true, "reason": "", "jd_evidence": "English"},
+    {"name": "experience_years", "passed": true, "reason": "", "jd_evidence": "5+ years"},
+    {"name": "seniority", "passed": true, "reason": "", "jd_evidence": "Senior"}
+  ],
+  "gaps": [
+    {"requirement": "Kafka", "impact": "must_have_skills", "action": "learn"}
+  ],
+  "prep": {
+    "questions": ["Q1"],
+    "references": [],
+    "next_actions": ["A1"]
+  }
+}

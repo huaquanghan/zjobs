@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-12T07:36:02.698089102Z",
+  "job": {
+    "source": "url",
+    "url": "https://boards.greenhouse.io/gitlab",
+    "hash": "a5f2eb1e933d841715a2c493f534de52f5a8576ea3d07d348c67ceb231060f6b"
+  },
+  "profile": "Tinh",
+  "cv": "cv-main",
+  "verdict": "Apply",
+  "score": 0.8652173913043479,
+  "axes": {
+    "domain_context": 0.8,
+    "evidence_strength": 0.9,
+    "hard_constraints": 0.9,
+    "must_have_skills": 0.9,
+    "nice_to_have_skills": 0.7,
+    "seniority_scope": 0.9
+  },
+  "gates": [
+    {
+      "name": "location",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "Hanoi, hybrid — remote friendly"
+    },
+    {
+      "name": "work_authorization",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "Open to all applicants"
+    },
+    {
+      "name": "language",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "English working language"
+    },
+    {
+      "name": "experience_years",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "5+ years backend, Go preferred"
+    },
+    {
+      "name": "seniority",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "Senior Backend Engineer"
+    }
+  ],
+  "gaps": [
+    {
+      "requirement": "Kafka",
+      "jd_evidence": "Nice to have: Kafka",
+      "cv_evidence": "No Kafka projects in CV",
+      "impact": "nice_to_have_skills",
+      "action": "learn"
+    }
+  ],
+  "prep": {
+    "questions": [
+      "Walk me through your largest Go service",
+      "How do you scale PostgreSQL?",
+      "Describe a production incident you owned"
+    ],
+    "references": [
+      {
+        "title": "PostgreSQL at Scale",
+        "url": "https://example.com/postgres-scale",
+        "source": "exa"
+      },
+      {
+        "title": "Go Concurrency Patterns",
+        "url": "https://example.com/go-concurrency",
+        "source": "exa"
+      }
+    ],
+    "next_actions": [
+      "Refresh Kafka basics",
+      "Draft one STAR story on incident response"
+    ]
+  }
+}

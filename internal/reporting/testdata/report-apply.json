@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-12T00:00:00Z",
+  "job": {
+    "title": "Senior Backend Engineer (Go)",
+    "company": "Acme",
+    "location": "Hanoi, hybrid",
+    "source": "url",
+    "url": "https://acme.dev/jobs/1",
+    "hash": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+  },
+  "profile": "backend",
+  "cv": "cv-main",
+  "verdict": "Apply",
+  "score": 0.8652173913043479,
+  "axes": {
+    "domain_context": 0.8,
+    "evidence_strength": 0.9,
+    "hard_constraints": 0.9,
+    "must_have_skills": 0.9,
+    "nice_to_have_skills": 0.7,
+    "seniority_scope": 0.9
+  },
+  "gates": [
+    {
+      "name": "location",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "Hanoi, hybrid"
+    },
+    {
+      "name": "work_authorization",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "Open to all applicants"
+    },
+    {
+      "name": "language",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "English working language"
+    },
+    {
+      "name": "experience_years",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "5+ years Go"
+    },
+    {
+      "name": "seniority",
+      "passed": true,
+      "reason": "",
+      "jd_evidence": "Senior Backend Engineer"
+    }
+  ],
+  "gaps": [
+    {
+      "requirement": "Kafka",
+      "jd_evidence": "Nice to have: Kafka",
+      "cv_evidence": "No Kafka projects in CV",
+      "impact": "nice_to_have_skills",
+      "action": "learn"
+    }
+  ],
+  "prep": {
+    "questions": [
+      "Walk me through your largest Go service",
+      "How do you scale PostgreSQL?",
+      "Describe a production incident you owned"
+    ],
+    "references": [
+      {
+        "title": "PostgreSQL at Scale",
+        "url": "https://example.com/postgres-scale",
+        "source": "exa"
+      },
+      {
+        "title": "Go Concurrency Patterns",
+        "url": "https://example.com/go-concurrency",
+        "source": "exa"
+      }
+    ],
+    "next_actions": [
+      "Refresh Kafka basics",
+      "Draft one STAR story on incident response"
+    ]
+  }
+}
