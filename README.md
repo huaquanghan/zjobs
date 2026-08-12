@@ -15,6 +15,10 @@ The tool is **read-only** for your profile/CV files — it never modifies them.
 
 Semantic analysis (the JSON payload) is orchestrated by the Claude skills in `.claude/skills/`; Go validates that payload and computes the deterministic verdict, score, and report.
 
+## Mental model
+
+![zjobs mental model](docs/mental-model.svg)
+
 ## Install / build
 
 ```sh
